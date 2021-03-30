@@ -41,7 +41,7 @@ export class MlsFootballAppStack extends cdk.Stack {
       apiId: footballGraphQLApi.attrApiId
     });
 
-    const apiSchema = new CfnGraphQLSchema(this, 'ItemsSchema', {
+    const apiSchema = new CfnGraphQLSchema(this, 'FootballSchema', {
       apiId: footballGraphQLApi.attrApiId,
       definition: `type ${playersTableName} {
         ${playersTableName}Id: ID!
